@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sudheer's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #121212;
+            color: #fff;
+        }
+
+        /* Hero Section */
+        #hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url(images/1.jpg) no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
+
+        #hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        #hero h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        #hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        #hero button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            background-color: #4caf50;
+            color: #fff;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        #hero button:hover {
+            background-color: #45a049;
+        }
+
+        /* Services Section */
+        #services {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #1e1e1e;
+        }
+
+        .service-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .service-card {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            width: 200px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Portfolio Section */
+        #portfolio {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #121212;
+        }
+
+        .portfolio-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .portfolio-item {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            width: 200px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .portfolio-item a {
+            color: #4caf50;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .portfolio-item a:hover {
+            color: #45a049;
+        }
+
+        /* Contact Section */
+        #contact {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #1e1e1e;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .icon-box {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #4caf50;
+            border-radius: 12px;
+            color: #fff;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .icon-box i {
+            font-size: 24px;
+        }
+
+        .icon-box:hover {
+            background-color: #4caf50;
+            transform: translateY(-5px);
+        }
+
+        @media (max-width: 768px) {
+            #hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .service-card, .portfolio-item {
+                width: 100%;
+            }
+
+            .contact-info a {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm Sudheer - Full Stack Developer</h1>
+            <p>Specialized in building scalable web applications</p>
+            
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>My Skills</h2>
+        <div class="service-container">
+            <div class="service-card">Java & Spring Boot</div>
+            <div class="service-card">Frontend (HTML, CSS, JS)</div>
+            <div class="service-card">Backend APIs</div>
+            <div class="service-card">Database (MySQL)</div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <h2>My Projects</h2>
+        <div class="portfolio-container">
+            <div class="portfolio-item">Project 1 <a href="#">View Details</a></div>
+            <div class="portfolio-item">Project 2 <a href=""><button onclick="project2()">View Details</button></a></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-info">
+            <a href="mailto:sudheer5f2@gmail.com" class="icon-box"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/sudheer-sangipogu-543a17336/" class="icon-box"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/sudheer5f2" class="icon-box"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/sudhir__5/" class="icon-box"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/sudhir__1405" class="icon-box"><i class="fab fa-x-twitter"></i></a>
+        </div>
+    </section>
+
+    <script>
+        
+        function project2() {
+            alert('Working on it...!');
+        }
+    </script>
+</body>
+</html>
