@@ -15,44 +15,6 @@
             color: #fff;
         }
 
-        /* Navigation Bar */
-        nav {
-            background-color: #1e1e1e;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1rem;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #4caf50;
-        }
-
-        .hamburger {
-            display: none;
-            font-size: 1.5rem;
-            background: none;
-            border: none;
-            color: #fff;
-            cursor: pointer;
-        }
-
         /* Hero Section */
         #hero {
             display: flex;
@@ -63,7 +25,6 @@
             color: #fff;
             text-align: center;
             position: relative;
-            padding: 0 20px;
         }
 
         #hero::before {
@@ -83,7 +44,7 @@
         }
 
         #hero h1 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 10px;
         }
 
@@ -94,6 +55,7 @@
 
         #hero button {
             padding: 10px 20px;
+            margin: 10px;
             border: none;
             cursor: pointer;
             background-color: #4caf50;
@@ -160,6 +122,19 @@
             transform: translateY(-10px);
         }
 
+        .portfolio-item a {
+            color: #4caf50;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .portfolio-item a:hover {
+            color: #45a049;
+        }
+
         /* Contact Section */
         #contact {
             padding: 50px 20px;
@@ -172,7 +147,6 @@
             gap: 20px;
             justify-content: center;
             margin-top: 20px;
-            flex-wrap: wrap;
         }
 
         .icon-box {
@@ -196,94 +170,68 @@
             transform: translateY(-5px);
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
-            .hamburger {
-                display: block;
-            }
-
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                gap: 10px;
-                background-color: #1e1e1e;
-                padding: 20px;
-                position: absolute;
-                top: 50px;
-                left: 0;
-                width: 100%;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
             #hero h1 {
-                font-size: 2rem;
+                font-size: 1.5rem;
             }
 
             .service-card, .portfolio-item {
                 width: 100%;
             }
 
-            .icon-box {
-                width: 40px;
-                height: 40px;
-            }
-
-            .icon-box i {
+            .contact-info a {
                 font-size: 20px;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm Sudheer - Full Stack Developer</h1>
+            <p>Specialized in building scalable web applications</p>
+            
+        </div>
+    </section>
 
-<!-- Navigation Bar -->
-<nav>
-    <div>Sudheer's Portfolio</div>
-    <button class="hamburger" onclick="toggleMenu()">☰</button>
-    <div class="nav-links">
-        <a href="#hero">Home</a>
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
-    </div>
-</nav>
+    <!-- Services Section -->
+    <section id="services">
+        <h2>My Skills</h2>
+        <div class="service-container">
+            <div class="service-card">Java & Spring Boot</div>
+            <div class="service-card">Frontend (HTML, CSS, JS)</div>
+            <div class="service-card">Backend APIs</div>
+            <div class="service-card">Database (MySQL)</div>
+        </div>
+    </section>
 
-<!-- Hero Section -->
-<section id="hero">
-    <div class="hero-content">
-        <h1>Hi, I'm Sudheer - Full Stack Developer</h1>
-        <p>Specialized in building scalable web applications</p>
-        <button onclick="alert('Get Started')">Get Started</button>
-    </div>
-</section>
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <h2>My Projects</h2>
+        <div class="portfolio-container">
+            <div class="portfolio-item">Project 1<a href="https://sudheer5f2.github.io/portfolio-website/">My Portfolio</a></div>
+            <div class="portfolio-item">Project 2 <a href=""><button onclick="project2()">View Details</button></a></div>
+        </div>
+    </section>
 
-<!-- Services Section -->
-<section id="services">
-    <h2>My Skills</h2>
-    <div class="service-container">
-        <div class="service-card">Java & Spring Boot</div>
-        <div class="service-card">Frontend (HTML, CSS, JS)</div>
-        <div class="service-card">Backend APIs</div>
-        <div class="service-card">Database (MySQL)</div>
-    </div>
-</section>
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-info">
+            <a href="mailto:sudheer5f2@gmail.com" class="icon-box"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/sudheer-sangipogu-543a17336/" class="icon-box"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/sudheer5f2" class="icon-box"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/sudhir__5/" class="icon-box"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/sudhir__1405" class="icon-box"><i class="fab fa-x-twitter"></i></a>
+        </div>
+    </section>
 
-<!-- Contact Section -->
-<section id="contact">
-    <h2>Contact Me</h2>
-    <div class="contact-info">
-        <!-- Contact Icons -->
-    </div>
-</section>
-
-<script>
-    function toggleMenu() {
-        document.querySelector('.nav-links').classList.toggle('active');
-    }
-</script>
-
+    <script>
+        
+        function project2() {
+            alert('Working on it...!');
+        }
+    </script>
 </body>
 </html>
