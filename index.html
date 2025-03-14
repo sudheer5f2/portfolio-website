@@ -25,6 +25,7 @@
             color: #fff;
             text-align: center;
             position: relative;
+            padding: 20px;
         }
 
         #hero::before {
@@ -41,10 +42,13 @@
         .hero-content {
             position: relative;
             z-index: 1;
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
         }
 
         #hero h1 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             margin-bottom: 10px;
         }
 
@@ -54,7 +58,7 @@
         }
 
         #hero button {
-            padding: 10px 20px;
+            padding: 12px 24px;
             margin: 10px;
             border: none;
             cursor: pointer;
@@ -62,6 +66,7 @@
             color: #fff;
             border-radius: 5px;
             transition: background 0.3s ease;
+            font-size: 1rem;
         }
 
         #hero button:hover {
@@ -86,9 +91,10 @@
             background-color: #333;
             padding: 20px;
             border-radius: 10px;
-            width: 200px;
+            width: calc(33% - 20px);
             text-align: center;
             transition: transform 0.3s ease;
+            box-sizing: border-box;
         }
 
         .service-card:hover {
@@ -113,9 +119,10 @@
             background-color: #333;
             padding: 20px;
             border-radius: 10px;
-            width: 200px;
+            width: calc(33% - 20px);
             text-align: center;
             transition: transform 0.3s ease;
+            box-sizing: border-box;
         }
 
         .portfolio-item:hover {
@@ -146,6 +153,7 @@
             display: flex;
             gap: 20px;
             justify-content: center;
+            flex-wrap: wrap;
             margin-top: 20px;
         }
 
@@ -170,28 +178,83 @@
             transform: translateY(-5px);
         }
 
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            #hero h1 {
+                font-size: 2rem;
+            }
+
+            #hero p {
+                font-size: 1rem;
+            }
+
+            .service-card,
+            .portfolio-item {
+                width: calc(50% - 20px);
+            }
+        }
+
         @media (max-width: 768px) {
+            #hero h1 {
+                font-size: 1.8rem;
+            }
+
+            #hero p {
+                font-size: 1rem;
+            }
+
+            .service-card,
+            .portfolio-item {
+                width: calc(100% - 20px);
+            }
+
+            .icon-box {
+                width: 40px;
+                height: 40px;
+            }
+
+            .icon-box i {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
             #hero h1 {
                 font-size: 1.5rem;
             }
 
-            .service-card, .portfolio-item {
-                width: 100%;
+            #hero p {
+                font-size: 0.9rem;
             }
 
-            .contact-info a {
-                font-size: 20px;
+            #hero button {
+                padding: 10px 18px;
+                font-size: 0.9rem;
+            }
+
+            .service-card,
+            .portfolio-item {
+                width: calc(100% - 20px);
+            }
+
+            .icon-box {
+                width: 36px;
+                height: 36px;
+            }
+
+            .icon-box i {
+                font-size: 18px;
             }
         }
     </style>
 </head>
 <body>
+
     <!-- Hero Section -->
     <section id="hero">
         <div class="hero-content">
             <h1>Hi, I'm Sudheer - Full Stack Developer</h1>
             <p>Specialized in building scalable web applications</p>
-            
         </div>
     </section>
 
@@ -211,7 +274,7 @@
         <h2>My Projects</h2>
         <div class="portfolio-container">
             <div class="portfolio-item">Project 1<a href="https://sudheer5f2.github.io/portfolio-website/">My Portfolio</a></div>
-            <div class="portfolio-item">Project 2 <a href=""><button onclick="project2()">View Details</button></a></div>
+            <div class="portfolio-item">Project 2 <a href="#"><button onclick="project2()">View Details</button></a></div>
         </div>
     </section>
 
@@ -228,10 +291,10 @@
     </section>
 
     <script>
-        
         function project2() {
             alert('Working on it...!');
         }
     </script>
+
 </body>
 </html>
